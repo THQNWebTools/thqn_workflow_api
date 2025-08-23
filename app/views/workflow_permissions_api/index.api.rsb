@@ -21,6 +21,18 @@ api.permissions do
               end
             end
           end
+          if custom_field.is_a?(IssueCustomField)
+            api.array :trackers do
+                custom_field.trackers.each do |tracker|
+                    api.tracker :id => tracker.id, :name => tracker.name
+                end
+            end
+          end
+          api.array :roles do
+            custom_field.roles.each do |role|
+              api.role :id => role.id, :name => role.name
+            end
+          end
           api.regexp custom_field.regexp
           api.min_length custom_field.min_length
           api.max_length custom_field.max_length
