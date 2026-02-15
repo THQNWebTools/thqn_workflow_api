@@ -46,7 +46,7 @@ api.permissions do
           api.visible custom_field.visible?
           api.multiple custom_field.multiple?
           api.format_store custom_field.format_store
-          api.description custom_field.description.squish
+          api.description custom_field.description&.squish
         end
     end
   end
