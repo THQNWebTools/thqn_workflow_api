@@ -1,4 +1,4 @@
-Redmine Workflow API
+Redmine Workflow API (Redmine 6 compatible)
 -------
 
 Redmine API to access workflow status transitions and field permissions.
